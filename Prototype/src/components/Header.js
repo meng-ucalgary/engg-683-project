@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../helpers/useAuth';
 
 const Header = () => {
   const navigate = useNavigate();
-
-  const { authed, logout } = {};
+  const { logout } = useAuth();
 
   function handleMenuToggle(e) {
     document.getElementById('navbar').classList.toggle('navbar-mobile');
@@ -14,15 +13,12 @@ const Header = () => {
   }
 
   function handleLogout(e) {
-    window.localStorage.removeItem('loginid');
-    window.localStorage.removeItem('token');
-
     logout().then(() => {
-      navigate('/home');
+      navigate('/');
     });
   }
 
-  const loginStatus = localStorage.getItem('Auth');
+  const loginStatus = localStorage.getItem('Authenticated');
 
   return (
     <header id='header' className='fixed-top header-scrolled'>
