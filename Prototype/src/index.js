@@ -4,8 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { RequireAuth } from './components/RequireAuth';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import ContactUs from './pages/ContactUs';
-import RegistrationPage from './pages/Register';
+import Pricing from './pages/Pricing';
 import YourAccount from './components/youraccount';
 import MainMenu from './components/mainmenu';
 import ErrorPage from './components/errorpage';
@@ -30,13 +31,13 @@ root.render(
         <Route path='/report' element={<ReportManagement />} />
         <Route path='/topup' element={<TopUp />} />
 
+        <Route path='/pricing' element={<Pricing />} />
         <Route path='/contact-us' element={<ContactUs />} />
-        <Route path='/register' element={<RegistrationPage />} />
+        <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/home' element={<HomePage />} />
         <Route path='/' element={<HomePage />} />
         <Route path='*' element={<ErrorPage />} />
-
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
