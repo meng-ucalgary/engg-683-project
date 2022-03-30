@@ -47,7 +47,7 @@ const Contact = () => {
         <section id='contact' className='contact'>
           <div className='container' data-aos='fade-up'>
             <div className='section-title'>
-              <h2>Contact</h2>
+              <h2>Contact Us</h2>
               <p>Reach us via phonecall, email, or simply fill the form below!</p>
             </div>
 
