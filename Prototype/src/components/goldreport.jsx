@@ -118,6 +118,43 @@ class GoldReport extends React.Component {
                         </tbody>
                     </table>
 
+                    <div className="row">
+                        <h2>Potential Identification Leaks</h2>
+
+
+                    </div>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>Personal Information Type</th>
+                                <th>Link</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Phone Number</td>
+                                <td><a href="https://www.facebook.com/SamoZaen">Phone Number List for Sale!</a></td>
+                                <td>2022-01-15</td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Phone Number</td>
+                                <td><a href="https://www.facebook.com/SamoZaen">List of phone numbers for spam</a></td>
+                                <td>2022-01-15</td>
+
+                            </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+
+
 
 
 
@@ -160,6 +197,9 @@ class GoldReport extends React.Component {
 
                         </tbody>
                     </table>
+
+
+
                     <div className="row">
                         <h2>Problematic Images You are Tagged On</h2>
                         <div class="text-center">
