@@ -31,7 +31,7 @@ const Footer = () => {
                   <i className='bx bx-chevron-right'></i> <Link to='/reports'>Reports</Link>
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <Link to='/contactus'>Contact us</Link>
+                  <i className='bx bx-chevron-right'></i> <Link to='/contact-us'>Contact us</Link>
                 </li>
               </ul>
             </div>

@@ -33,6 +33,11 @@ const Header = () => {
 
         <nav id='navbar' className='navbar'>
           <ul>
+            <li>
+              <Link className='nav-link' to='/contact-us'>
+                Contact us
+              </Link>
+            </li>
             {loginStatus === '1' ? (
               <React.Fragment>
                 <li>
