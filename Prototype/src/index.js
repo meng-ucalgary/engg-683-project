@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOMClient from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
@@ -13,7 +13,10 @@ import ReportManagement from './components/reportmanagement';
 import BasicReport from './components/basicreport';
 import GoldReport from './components/goldreport';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = ReactDOMClient.createRoot(container);
+
+root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
@@ -30,7 +33,5 @@ ReactDOM.render(
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
-
-  document.getElementById('root')
+  </React.StrictMode>
 );
