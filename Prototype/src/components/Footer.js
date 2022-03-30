@@ -69,9 +69,6 @@ const Footer = () => {
                 <a href='https://www.instagram.com' className='instagram' rel='noopener noreferrer' target='_blank'>
                   <i className='bx bxl-instagram'></i>
                 </a>
-                <a href='https://www.skyper.com' className='google-plus' rel='noopener noreferrer' target='_blank'>
-                  <i className='bx bxl-skype'></i>
-                </a>
                 <a href='https://www.linkedin.com' className='linkedin' rel='noopener noreferrer' target='_blank'>
                   <i className='bx bxl-linkedin'></i>
                 </a>
