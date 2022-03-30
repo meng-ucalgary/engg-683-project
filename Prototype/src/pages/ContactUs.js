@@ -44,24 +44,24 @@ const Contact = () => {
           </div>
         </section>
 
-        <section id='contact' class='contact'>
-          <div class='container' data-aos='fade-up'>
-            <div class='section-title'>
+        <section id='contact' className='contact'>
+          <div className='container' data-aos='fade-up'>
+            <div className='section-title'>
               <h2>Contact</h2>
               <p>Reach us via phonecall, email, or simply fill the form below!</p>
             </div>
 
-            <div class='row'>
-              <div class='col-lg-5 d-flex align-items-stretch'>
-                <div class='info'>
-                  <div class='address'>
-                    <i class='bi bi-geo-alt'></i>
+            <div className='row'>
+              <div className='col-lg-5 d-flex align-items-stretch'>
+                <div className='info'>
+                  <div className='address'>
+                    <i className='bi bi-geo-alt'></i>
                     <h4>Location:</h4>
                     <p>2500 University Dr NW, Calgary, AB T2N1N4</p>
                   </div>
 
-                  <div class='email'>
-                    <i class='bi bi-envelope'></i>
+                  <div className='email'>
+                    <i className='bi bi-envelope'></i>
                     <h4>Email:</h4>
                     <p>
                       <a href='mailto:info@intellirn.ml' style={{ color: 'inherit' }}>
@@ -70,8 +70,8 @@ const Contact = () => {
                     </p>
                   </div>
 
-                  <div class='phone'>
-                    <i class='bi bi-phone'></i>
+                  <div className='phone'>
+                    <i className='bi bi-phone'></i>
                     <h4>Call:</h4>
                     <p>
                       <a href='tel:+19876543210' style={{ color: 'inherit' }}>
@@ -86,9 +86,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div class='col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch'>
-                <form class='php-email-form' id='contactform' onSubmit={handleSubmit}>
-                  <div class='row'>
+              <div className='col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch'>
+                <form className='php-email-form' id='contactform' onSubmit={handleSubmit}>
+                  <div className='row'>
                     <div className='form-group col-md-6'>
                       <label htmlFor='name'>Your Name</label>
                       <input
