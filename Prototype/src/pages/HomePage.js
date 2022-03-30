@@ -23,41 +23,10 @@ const Home = () => {
       </section>
 
       <main id='main'>
-        {/* <section id='about' className='about'>
-          <div className='container' data-aos='fade-up'>
-            <div className='section-title'>
-              <h2>About Us</h2>
-            </div>
-
-            <div className='row content'>
-              <div className='col-lg-6'>
-                <p>We are a fast growing startup, that aims to use technology to counter side effects of technology.</p>
-                <ul>
-                  <li>
-                    <i className='ri-check-double-line'></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat
-                  </li>
-                  <li>
-                    <i className='ri-check-double-line'></i> Duis aute irure dolor in reprehenderit in voluptate velit
-                  </li>
-                  <li>
-                    <i className='ri-check-double-line'></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat
-                  </li>
-                </ul>
-              </div>
-              <div className='col-lg-6 pt-4 pt-lg-0'>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
         <section id='why-us' className='why-us section-bg'>
           <div className='container-fluid' data-aos='fade-up'>
             <div className='row'>
-              <div className='col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1'>
+              <div className='col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-1 order-lg-2'>
                 <div className='content'>
                   <h3>
                     Don't know how <strong>important</strong> is your online reputation?
@@ -109,7 +78,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className='col-lg-5 align-items-stretch order-1 order-lg-2 img' style={{ backgroundImage: `url("assets/img/why-us.png")` }} data-aos='zoom-in' data-aos-delay='150'>
+              <div className='col-lg-5 align-items-stretch order-2 order-lg-1 img' style={{ backgroundImage: `url("assets/img/why-us.png")` }} data-aos='zoom-in' data-aos-delay='150'>
                 &nbsp;
               </div>
             </div>
@@ -119,59 +88,59 @@ const Home = () => {
         <section id='skills' className='skills'>
           <div className='container' data-aos='fade-up'>
             <div className='row'>
-              <div className='col-lg-6 d-flex align-items-center' data-aos='fade-right' data-aos-delay='100'>
-                <img src='assets/img/skills.png' className='img-fluid' alt='' />
-              </div>
               <div className='col-lg-6 pt-4 pt-lg-0 content' data-aos='fade-left' data-aos-delay='100'>
                 <h3>Problematic posts can be on any social media!</h3>
-                <p className='fst-italic'>As per research XXX, so many problems on every platform</p>
+                <p className='fst-italic'>As per research XXX, very high percentage of posts on each social media platform can be problematic</p>
 
                 <div className='skills-content'>
                   <div className='progress'>
                     <span className='skill'>
-                      Facebook <i className='val'>100%</i>
+                      Facebook <i className='val'>70%</i>
                     </span>
                     <div className='progress-bar-wrap'>
-                      <div className='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100'></div>
+                      <div className='progress-bar' role='progressbar' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100' style={{ width: '70%' }}></div>
                     </div>
                   </div>
 
                   <div className='progress'>
                     <span className='skill'>
-                      Twitter <i className='val'>90%</i>
+                      Twitter <i className='val'>65%</i>
                     </span>
                     <div className='progress-bar-wrap'>
-                      <div className='progress-bar' role='progressbar' aria-valuenow='90' aria-valuemin='0' aria-valuemax='100'></div>
+                      <div className='progress-bar' role='progressbar' aria-valuenow='65' aria-valuemin='0' aria-valuemax='100' style={{ width: '65%' }}></div>
                     </div>
                   </div>
 
                   <div className='progress'>
                     <span className='skill'>
-                      Instagram <i className='val'>75%</i>
+                      Instagram <i className='val'>43%</i>
                     </span>
                     <div className='progress-bar-wrap'>
-                      <div className='progress-bar' role='progressbar' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100'></div>
+                      <div className='progress-bar' role='progressbar' aria-valuenow='43' aria-valuemin='0' aria-valuemax='100' style={{ width: '43%' }}></div>
                     </div>
                   </div>
 
                   <div className='progress'>
                     <span className='skill'>
-                      Linkedin <i className='val'>75%</i>
+                      Linkedin <i className='val'>29%</i>
                     </span>
                     <div className='progress-bar-wrap'>
-                      <div className='progress-bar' role='progressbar' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100'></div>
+                      <div className='progress-bar' role='progressbar' aria-valuenow='29' aria-valuemin='0' aria-valuemax='100' style={{ width: '29%' }}></div>
                     </div>
                   </div>
 
                   <div className='progress'>
                     <span className='skill'>
-                      Reddit <i className='val'>55%</i>
+                      Reddit <i className='val'>54%</i>
                     </span>
                     <div className='progress-bar-wrap'>
-                      <div className='progress-bar' role='progressbar' aria-valuenow='55' aria-valuemin='0' aria-valuemax='100'></div>
+                      <div className='progress-bar' role='progressbar' aria-valuenow='54' aria-valuemin='0' aria-valuemax='100' style={{ width: '54%' }}></div>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className='col-lg-6 d-flex align-items-center' data-aos='fade-right' data-aos-delay='100'>
+                <img src='assets/img/skills.png' className='img-fluid' alt='' />
               </div>
             </div>
           </div>
