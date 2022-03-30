@@ -1,66 +1,111 @@
-import React from 'react';
-import NavBarStart from '../components/navbarstart';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../helpers/useAuth';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-class Login extends React.Component {
-  state = {
-    users: [],
-    username: '',
+const Login = () => {
+  const navigate = useNavigate();
+  const { login } = useAuth();
+
+  const [message, setMessage] = useState({
+    email: '',
     password: '',
-    errorMessage: '',
-    redirect: null,
-    // verifyUser: false,
+  });
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    let email = window.localStorage.getItem('email');
+    let password = window.localStorage.getItem('password');
+
+    if (email === null) {
+      window.alert('You must register first');
+      return;
+    }
+
+    if (message.email === email && message.password === password) {
+      login().then(() => {
+        navigate('/');
+      });
+    } else {
+      window.alert('Incorrect email or password');
+    }
   };
 
-  getUsername = (e) => {
-    console.log('Username: ', e.target.value);
-    this.setState({ username: e.target.value });
-  };
+  return (
+    <React.Fragment>
+      <Header />
 
-  getPassword = (e) => {
-    console.log('Password: ', e.target.value);
-    this.setState({ password: e.target.value });
-  };
+      <main id='main'>
+        <section id='breadcrumbs' className='breadcrumbs'>
+          <div className='container'>
+            <div className='d-flex justify-content-between align-items-center'>
+              <h4 style={{ visibility: 'hidden' }}>heading not to be displayed</h4>
+              <ol>
+                <li>
+                  <Link to='/'>Home</Link>
+                </li>
+                <li>Log in</li>
+              </ol>
+            </div>
+          </div>
+        </section>
 
-  render() {
-    let hyperlink = '/menu';
-    let errorMessage = '';
+        <section className='inner-page'>
+          <div className='container'>
+            <h3 className='pb-5'>Welcome back</h3>
 
-    return (
-      <React.Fragment>
-        <NavBarStart />
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-3 col-md-2'></div>
-            <div className='col-lg-6 col-md-8 login-box'>
-              <div className='col-lg-12 login-title'>Sign in to your account</div>
-
-              <div className='login-form'>
-                <form>
+            <div className='row'>
+              <div className='col-lg-5'>
+                <img src={`${process.env.PUBLIC_URL + '/images/access_denied.svg'}`} alt='login pic' />
+              </div>
+              <div className='col-lg-5 p-5'>
+                <form id='loginForm' onSubmit={handleLogin}>
                   <div className='form-group'>
-                    <label className='form-control-label'>Username</label>
-                    <input type='text' className='form-control' onChange={(e) => this.getUsername(e)} />
-                  </div>
-                  <div className='form-group'>
-                    <label className='form-control-label'>Password</label>
-                    <input type='password' className='form-control' i onChange={(e) => this.getPassword(e)} />
+                    <label htmlFor='email'>Email address</label>
+                    <input
+                      type='email'
+                      name='email'
+                      className='form-control'
+                      id='email'
+                      maxLength='100'
+                      value={message['email']}
+                      required
+                      onChange={(e) => {
+                        setMessage({ ...message, email: e.target.value });
+                      }}
+                    />
                   </div>
 
-                  <div>
-                    <a href={hyperlink} className='btn btn-primary'>
-                      Login
-                    </a>
+                  <div className='form-group pt-4'>
+                    <label htmlFor='password'>Password</label>
+                    <input
+                      type='password'
+                      className='form-control'
+                      name='password'
+                      id='password'
+                      maxLength='100'
+                      value={message['password']}
+                      required
+                      onChange={(e) => {
+                        setMessage({ ...message, password: e.target.value });
+                      }}
+                    />
                   </div>
-                  <div className='error'>
-                    <h> {errorMessage} </h>
+
+                  <div className='form-group pt-4'>
+                    <button className='btn btn-primary'>Login</button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-        </div>
-      </React.Fragment>
-    );
-  }
-}
+        </section>
+      </main>
 
+      <Footer />
+    </React.Fragment>
+  );
+};
 export default Login;

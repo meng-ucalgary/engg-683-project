@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOMClient from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { RequireAuth } from './components/RequireAuth';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
+import ContactUs from './pages/ContactUs';
 import RegistrationPage from './pages/Register';
 import YourAccount from './components/youraccount';
 import MainMenu from './components/mainmenu';
@@ -20,17 +22,21 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/login' element={<Login />} />
         <Route path='/products' element={<ProductLine />} />
-        <Route path='/goldreportsample' element={<GoldReport />} />
+        <Route path='/goldreportsample' element={<RequireAuth><GoldReport /></RequireAuth>} />
         <Route path='/basicreportsample' element={<BasicReport />} />
-        <Route path='/register' element={<RegistrationPage />} />
-        <Route path='/youraccount' element={<YourAccount />} />
+        <Route path='/youraccount' element={<RequireAuth><YourAccount /></RequireAuth>} />
         <Route path='/menu' element={<MainMenu />} />
         <Route path='/report' element={<ReportManagement />} />
         <Route path='/topup' element={<TopUp />} />
+
+        <Route path='/contact-us' element={<ContactUs />} />
+        <Route path='/register' element={<RegistrationPage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/home' element={<HomePage />} />
         <Route path='/' element={<HomePage />} />
         <Route path='*' element={<ErrorPage />} />
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
