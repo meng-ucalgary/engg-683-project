@@ -34,14 +34,14 @@ const Pricing = () => {
         </section>
 
         <section id='pricing' className='pricing'>
-          <div className='container' data-aos='fade-up'>
+          <div className='container'>
             <div className='section-title'>
               <h2>Pricing</h2>
               <p>We offer a variety of options for you to choose from. Our competitive pricing ensures everyone can improve their social media reputation.</p>
             </div>
 
             <div className='row'>
-              <div className='col-lg-4' data-aos='fade-up' data-aos-delay='100'>
+              <div className='col-lg-4'>
                 <div className='box featured'>
                   <h3>Basic Plan</h3>
                   <h4>
@@ -70,7 +70,7 @@ const Pricing = () => {
                 </div>
               </div>
 
-              <div className='col-lg-4 mt-4 mt-lg-0' data-aos='fade-up' data-aos-delay='200'>
+              <div className='col-lg-4 mt-4 mt-lg-0'>
                 <div className='box featured'>
                   <h3>Gold Plan</h3>
                   <h4>
@@ -99,7 +99,7 @@ const Pricing = () => {
                 </div>
               </div>
 
-              <div className='col-lg-4 mt-4 mt-lg-0' data-aos='fade-up' data-aos-delay='300'>
+              <div className='col-lg-4 mt-4 mt-lg-0'>
                 <div className='box featured'>
                   <h3>Ultimate Plan</h3>
                   <h4>
