@@ -36,7 +36,9 @@ const SampleGoldReport = () => {
             <h3 className='pb-5'>Report 27563 - Details</h3>
 
             <div className='px-3'>
-              <h5>Problematic Posts You Authored</h5>
+              <h5>
+                <u>Problematic Posts You Authored</u>
+              </h5>
               <div className='row pt-3 px-3'>
                 <div className='col-lg-5'>
                   <img src={`${process.env.PUBLIC_URL + '/images/PostsAuthored.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
@@ -77,7 +79,9 @@ const SampleGoldReport = () => {
             </div>
 
             <div className='pt-5 px-3'>
-              <h5>Problematic Posts You are Tagged On</h5>
+              <h5>
+                <u>Problematic Posts You are Tagged On</u>
+              </h5>
               <div className='row pt-3 px-3'>
                 <div className='col-lg-7'>
                   <div className='card' style={{ border: '0' }}>
@@ -120,7 +124,9 @@ const SampleGoldReport = () => {
             </div>
 
             <div className='px-3'>
-              <h5>Problematic Images You Uploaded</h5>
+              <h5>
+                <u>Problematic Images You Uploaded</u>
+              </h5>
               <div className='row pt-3 px-3'>
                 <div className='col-lg-5'>
                   <img src={`${process.env.PUBLIC_URL + '/images/ImagesAuthored.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
@@ -161,7 +167,9 @@ const SampleGoldReport = () => {
             </div>
 
             <div className='pt-5 px-3'>
-              <h5>Problematic Images You are Tagged On</h5>
+              <h5>
+                <u>Problematic Images You are Tagged On</u>
+              </h5>
               <div className='row pt-3 px-3'>
                 <div className='col-lg-7'>
                   <div className='card' style={{ border: '0' }}>
@@ -204,7 +212,9 @@ const SampleGoldReport = () => {
             </div>
 
             <div className='pt-5 px-3'>
-              <h5>Potential Identification Leaks</h5>
+              <h5>
+                <u>Potential Identification Leaks</u>
+              </h5>
               <div className='row pt-3 px-3'>
                 <div className='col-lg-12'>
                   <div className='card' style={{ border: '0' }}>
