@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const ErrorPage = () => {
+const Error = () => {
   return (
     <React.Fragment>
       <Header />
@@ -44,4 +44,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default Error;
