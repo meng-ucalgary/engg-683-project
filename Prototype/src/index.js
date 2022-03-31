@@ -8,13 +8,9 @@ import Register from './pages/Register';
 import ContactUs from './pages/ContactUs';
 import Pricing from './pages/Pricing';
 import Profile from './pages/Profile';
-
-import MainMenu from './components/mainmenu';
-import ProductLine from './components/productline';
-import TopUp from './components/topup';
-import ReportManagement from './components/reportmanagement';
-import BasicReport from './components/basicreport';
-import GoldReport from './components/goldreport';
+import ViewReports from './pages/Reports';
+import BasicReport from './pages/SampleReportBasic';
+import GoldReport from './pages/SampleReportGold';
 import ErrorPage from './pages/ErrorPage';
 
 const container = document.getElementById('root');
@@ -24,14 +20,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/products' element={<ProductLine />} />
-        <Route path='/goldreportsample' element={<RequireAuth><GoldReport /></RequireAuth>} />
-        <Route path='/basicreportsample' element={<BasicReport />} />
-        <Route path='/menu' element={<MainMenu />} />
-        <Route path='/report' element={<ReportManagement />} />
-        <Route path='/topup' element={<TopUp />} />
+        <Route path='/reports/sample-report-basic' element={<RequireAuth><BasicReport /></RequireAuth>} />
+        <Route path='/reports/sample-report-gold' element={<RequireAuth><GoldReport /></RequireAuth>} />
+        <Route path='/reports' element={<RequireAuth><ViewReports /></RequireAuth>} />
         <Route path='/profile' element={<RequireAuth><Profile /></RequireAuth>} />
-
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/register' element={<Register />} />
