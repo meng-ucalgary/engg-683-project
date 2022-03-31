@@ -27,4 +27,7 @@ A project on creating a hypothetical startup.
 
 ## Attribution
 
-- [Logo](https://www.flaticon.com/free-icons/eye) from Freepik
+- Logo from [here](https://www.flaticon.com/free-icons/eye)
+- Social Media illustration from [here](https://iconscout.com/contributors/permadicreative)
+- 404 illustration from [here](https://iconscout.com/illustrations/access-denied)
+- Access Denied illustration from [here](https://iconscout.com/3ds/404-error)
