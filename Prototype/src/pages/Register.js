@@ -1,156 +1,301 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-import NavBarStart from '../components/navbarstart';
+const Register = () => {
+  const navigate = useNavigate();
+  const [confirmPass, setConfirmPass] = useState('');
 
-class Register extends React.Component {
-  state = {
-    filterOption: 0,
+  let chosenPlan = window.localStorage.getItem('chosenPlan');
 
-    firstName: '',
-    middleName: '',
-    lastName: '',
-    role: 'ADMIN',
-    emailId: '',
+  const [message, setMessage] = useState({
+    name: '',
+    email: '',
     password: '',
-    status: 'INACTIVE',
-  };
+    plan: chosenPlan,
+    twitterUsername: '',
+    facebookUsername: '',
+    linkedinUsername: '',
+    redditUsername: '',
+    instagramUsername: '',
+    pinterestUsername: '',
+  });
 
-  handleFilter = (e) => {
-    let pos = '';
-    this.setState({
-      filterOption: e.target.value,
-      role: pos,
-    });
+  const handleRegister = (e) => {
+    e.preventDefault();
 
-    if (e.target.value == 0) {
-      pos = 'ADMIN';
-    } else if (e.target.value == 1) {
-      pos = 'ATTENDANT';
-    } else if (e.target.value == 2) {
-      pos = 'TECHNICIAN';
-    } else if (e.target.value == 3) {
-      pos = 'TEACHER';
-    } else if (e.target.value == 4) {
-      pos = 'STUDENT';
+    if (message.password !== confirmPass) {
+      window.alert('Passwords do not match');
+      return;
     }
 
-    this.setState({
-      filterOption: e.target.value,
-      role: pos,
-    });
-    //this.setState({filterOption: 1});
-    console.log('Role Selected', this.state.role);
+    window.localStorage.setItem('name', message.name);
+    window.localStorage.setItem('email', message.email);
+    window.localStorage.setItem('password', message.password);
+    window.localStorage.setItem('plan', message.plan);
+    window.localStorage.setItem('twitterUsername', message.twitterUsername);
+    window.localStorage.setItem('facebookUsername', message.facebookUsername);
+    window.localStorage.setItem('linkedinUsername', message.linkedinUsername);
+    window.localStorage.setItem('redditUsername', message.redditUsername);
+    window.localStorage.setItem('instagramUsername', message.instagramUsername);
+    window.localStorage.setItem('pinterestUsername', message.pinterestUsername);
+
+    window.localStorage.removeItem('chosenPlan');
+
+    window.alert('You have successfully registered! Please login to continue.');
+    navigate('/login');
   };
 
-  handleFnChange(event) {
-    this.setState({ firstName: event.target.value });
-  }
+  useEffect(() => {
+    if (window.localStorage.getItem('Authenticated') === '1') {
+      // window.alert('You are already registered!');
+      navigate('/profile');
+    }
+  }, []);
 
-  handleMnChange(event) {
-    this.setState({ middleName: event.target.value });
-  }
+  return (
+    <React.Fragment>
+      <Header />
 
-  handleLnChange(event) {
-    this.setState({ lastName: event.target.value });
-  }
-
-  handlePsChange(event) {
-    this.setState({ password: event.target.value });
-  }
-
-  handleEmChange(event) {
-    this.setState({ emailId: event.target.value });
-  }
-
-  handleRegister = (e) => {
-    //window.location.reload(false);
-    window.alert('Activation verification has been sent to your email.');
-
-    this.props.history.push('/');
-  };
-
-  render() {
-    return (
-      <React.Fragment>
-        <NavBarStart />
-        <div className='container'>
-          <div className='card' style={this.styles}>
-            <div className='card-body'>
-              <h5 className='card-title'>Register for an Account Now</h5>
-              <div className='row'>
-                <div className='col-sm'>
-                  <input
-                    type='text'
-                    id='inputFilter'
-                    className='form-control'
-                    placeholder='First Name'
-                    value={this.state.firstName}
-                    onChange={(e) => this.handleFnChange(e)}
-                    aria-label='First Name'
-                    aria-describedby='basic-addon2'
-                  />
-                </div>
-                <div className='col-sm'>
-                  <input
-                    type='text'
-                    id='inputFilter'
-                    className='form-control'
-                    placeholder='Middle Name'
-                    value={this.state.middleName}
-                    onChange={(e) => this.handleMnChange(e)}
-                    aria-label='Middle Name'
-                    aria-describedby='basic-addon2'
-                  />
-                </div>
-                <div className='col-sm'>
-                  <input
-                    type='text'
-                    id='inputFilter'
-                    className='form-control'
-                    placeholder='Last Name'
-                    value={this.state.lastName}
-                    onChange={(e) => this.handleLnChange(e)}
-                    aria-label='Last Name'
-                    aria-describedby='basic-addon2'
-                  />
-                </div>
-              </div>
-
-              <div className='row'></div>
-              <div className='row'>
-                <input
-                  type='text'
-                  id='inputFilter'
-                  className='form-control'
-                  placeholder='Email Address'
-                  value={this.state.emailId}
-                  onChange={(e) => this.handleEmChange(e)}
-                  aria-label='Email Address'
-                  aria-describedby='basic-addon2'
-                />
-              </div>
-              <div className='row'>
-                <input
-                  type='text'
-                  id='inputFilter'
-                  className='form-control'
-                  placeholder='Create Password'
-                  value={this.state.password}
-                  onChange={(e) => this.handlePsChange(e)}
-                  aria-label='Create Password'
-                  aria-describedby='basic-addon2'
-                />
-              </div>
-
-              <button onClick={(e) => this.handleRegister(e)} className='btn btn-primary'>
-                Register
-              </button>
+      <main id='main'>
+        <section id='breadcrumbs' className='breadcrumbs'>
+          <div className='container'>
+            <div className='d-flex justify-content-between align-items-center'>
+              <h4 style={{ visibility: 'hidden' }}>heading not to be displayed</h4>
+              <ol>
+                <li>
+                  <Link to='/'>Home</Link>
+                </li>
+                <li>Register</li>
+              </ol>
             </div>
           </div>
-        </div>
-      </React.Fragment>
-    );
-  }
-}
+        </section>
+
+        <section className='inner-page'>
+          <div className='container'>
+            <h3 className='pb-5'>Fill in the form to register for a new account</h3>
+
+            <div className='row'>
+              <div className='col-lg-10 col-md-12 px-5'>
+                <form id='registerForm' onSubmit={handleRegister}>
+                  <h5 className='pb-3'>Personal details</h5>
+                  <div className='row px-3'>
+                    <div className='form-group col-md-5'>
+                      <label htmlFor='formName'>Full Name</label>
+                      <input
+                        type='text'
+                        id='formName'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        required
+                        value={message['name']}
+                        onChange={(e) => {
+                          setMessage({ ...message, name: e.target.value });
+                        }}
+                      />
+                    </div>
+                    <div className='form-group col'>
+                      <label htmlFor='formEmail'>Email Address</label>
+                      <input
+                        type='email'
+                        id='formEmail'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        required
+                        value={message['email']}
+                        onChange={(e) => {
+                          setMessage({ ...message, email: e.target.value });
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className='row pt-3 px-3'>
+                    <div className='form-group col-md-6'>
+                      <label htmlFor='formCreatePassword'>Create Password</label>
+                      <input
+                        type='password'
+                        id='formCreatePassword'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        required
+                        value={message['password']}
+                        onChange={(e) => {
+                          setMessage({ ...message, password: e.target.value });
+                        }}
+                      />
+                    </div>
+                    <div className='form-group col'>
+                      <label htmlFor='formConfirmPassword'>Confirm Password</label>
+                      <input
+                        type='password'
+                        id='formConfirmPassword'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        required
+                        value={confirmPass}
+                        onChange={(e) => {
+                          setConfirmPass(e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <h5 className='pt-5'>Social media details</h5>
+                  <div className='row pt-3 px-3'>
+                    <div className='form-group col-md-6'>
+                      <label htmlFor='formTwitter'>Twitter Username</label>
+                      <input
+                        type='text'
+                        id='formTwitter'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        value={message['twitterUsername']}
+                        onChange={(e) => {
+                          setMessage({ ...message, twitterUsername: e.target.value });
+                        }}
+                      />
+                    </div>
+                    <div className='form-group col'>
+                      <label htmlFor='formFacebook'>Facebook Username</label>
+                      <input
+                        type='text'
+                        id='formFacebook'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        value={message['facebookUsername']}
+                        onChange={(e) => {
+                          setMessage({ ...message, facebookUsername: e.target.value });
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className='row pt-3 px-3'>
+                    <div className='form-group col-md-6'>
+                      <label htmlFor='formLinkedin'>Linkedin Username</label>
+                      <input
+                        type='text'
+                        id='formLinkedin'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        value={message['linkedinUsername']}
+                        onChange={(e) => {
+                          setMessage({ ...message, linkedinUsername: e.target.value });
+                        }}
+                      />
+                    </div>
+                    <div className='form-group col'>
+                      <label htmlFor='formReddit'>Reddit Username</label>
+                      <input
+                        type='text'
+                        id='formReddit'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        value={message['redditUsername']}
+                        onChange={(e) => {
+                          setMessage({ ...message, redditUsername: e.target.value });
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className='row pt-3 px-3'>
+                    <div className='form-group col-md-6'>
+                      <label htmlFor='formInstagram'>Instagram Username</label>
+                      <input
+                        type='text'
+                        id='formInstagram'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        value={message['instagramUsername']}
+                        onChange={(e) => {
+                          setMessage({ ...message, instagramUsername: e.target.value });
+                        }}
+                      />
+                    </div>
+                    <div className='form-group col'>
+                      <label htmlFor='formPinterest'>Pinterest Username</label>
+                      <input
+                        type='text'
+                        id='formPinterest'
+                        className='form-control'
+                        min='0'
+                        maxLength='250'
+                        value={message['pinterestUsername']}
+                        onChange={(e) => {
+                          setMessage({ ...message, pinterestUsername: e.target.value });
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <h5 className='pt-5'>Plan details</h5>
+                  <div className='row pt-3 px-3'>
+                    <div className='form-group col-md-6'>
+                      <label htmlFor='formPlan'>Plan</label>
+                      <select
+                        id='formPlan'
+                        className='form-control'
+                        defaultValue={message['plan']}
+                        style={{ appearance: 'auto' }}
+                        onChange={(e) => {
+                          setMessage({ ...message, plan: e.target.value });
+                        }}
+                      >
+                        <option value='basic'>Basic Plan</option>
+                        <option value='gold'>Gold Plan</option>
+                        <option value='ultimate'>Ultimate Plan</option>
+                      </select>
+                    </div>
+                    <div className='form-group col'>
+                      <label htmlFor='formAmount'>Upfront Amount</label>
+                      <div id='formAmount' className='form-control' style={{ margin: '0', overflow: 'hidden', backgroundColor: '#eaecf4', opacity: '1', boxSizing: 'border-box' }}>
+                        {message['plan'] === 'basic' ? '$ 5.00' : message['plan'] === 'gold' ? '$ 10.00' : '$ 30.00'}
+                      </div>
+                    </div>
+                  </div>
+                  <div className='row pt-3 px-3'>
+                    <div className='form-group col-md-8'>
+                      <label htmlFor='formCreditNumber'>Credit Card Number</label>
+                      <input type='text' id='formCreditNumber' className='form-control' min='0' maxLength='20' required />
+                    </div>
+                    <div className='form-group col'>
+                      <label htmlFor='formCreditExpiry'>Credit Card Expiry</label>
+                      <input type='text' id='formCreditExpiry' className='form-control' placeholder='MM-YY' min='0' maxLength='5' required />
+                    </div>
+                  </div>
+                  <div className='row pt-3 px-3'>
+                    <div className='form-group col-md-8'>
+                      <label htmlFor='formCreditName'>Name on Credit Card</label>
+                      <input type='text' id='formCreditName' className='form-control' min='0' required />
+                    </div>
+                    <div className='form-group col'>
+                      <label htmlFor='formCreditCVC'>CVC / CVV</label>
+                      <input type='text' id='formCreditCVC' className='form-control' min='0' maxLength='3' required />
+                    </div>
+                  </div>
+                  <div className='form-group pt-4'>
+                    <button className='btn btn-primary'>Register</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </React.Fragment>
+  );
+};
 
 export default Register;
