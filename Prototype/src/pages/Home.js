@@ -16,7 +16,7 @@ const Home = () => {
               <h2>Don't let Social Media blowback your future</h2>
             </div>
             <div className='col-lg-6 order-1 order-lg-2 hero-img' data-aos='zoom-in'>
-              <img src={`${process.env.PUBLIC_URL + 'assets/img/hero-img.png'}`} className='img-fluid animated' alt='' />
+              <img src={`${process.env.PUBLIC_URL + '/assets/img/hero-img.png'}`} className='img-fluid animated' alt='' />
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className='col-lg-5 align-items-stretch order-2 order-lg-1 img' style={{ backgroundImage: `url(${process.env.PUBLIC_URL + 'assets/img/why-us.png'})` }} data-aos='zoom-in'>
+              <div className='col-lg-5 align-items-stretch order-2 order-lg-1 img' style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/img/why-us.png'})` }} data-aos='zoom-in'>
                 &nbsp;
               </div>
             </div>
@@ -140,7 +140,7 @@ const Home = () => {
                 </div>
               </div>
               <div className='col-lg-6 d-flex align-items-center' data-aos='fade-right'>
-                <img src={`${process.env.PUBLIC_URL + 'assets/img/skills.png'}`} className='img-fluid' alt='' />
+                <img src={`${process.env.PUBLIC_URL + '/assets/img/skills.png'}`} className='img-fluid' alt='' />
               </div>
             </div>
           </div>
