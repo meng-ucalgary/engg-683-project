@@ -45,7 +45,7 @@ const Pricing = () => {
                 <div className='box featured'>
                   <h3>Basic Plan</h3>
                   <h4>
-                    <sup>$</sup>9<span>per month</span>
+                    <sup>$</sup>5<span>one time</span>
                   </h4>
                   <ul>
                     <li>
@@ -74,7 +74,7 @@ const Pricing = () => {
                 <div className='box featured'>
                   <h3>Gold Plan</h3>
                   <h4>
-                    <sup>$</sup>19<span>per month</span>
+                    <sup>$</sup>10<span>one time</span>
                   </h4>
                   <ul>
                     <li>
@@ -103,17 +103,17 @@ const Pricing = () => {
                 <div className='box featured'>
                   <h3>Ultimate Plan</h3>
                   <h4>
-                    <sup>$</sup>39<span>per month</span>
+                    <sup>$</sup>30<span>per annum</span>
                   </h4>
                   <ul>
                     <li>
                       <i className='bx bx-check'></i> Everything in Gold Plan
                     </li>
                     <li>
-                      <i className='bx bx-check'></i> Continuous monitoring of your social media accounts
+                      <i className='bx bx-check'></i> Continuous monitoring of your social media accounts for 12 months
                     </li>
                     <li>
-                      <i className='bx bx-check'></i> Weekly updates on reputation risk analysis
+                      <i className='bx bx-check'></i> Monthly updates on reputation risk analysis
                     </li>
                     <li>
                       <i className='bx bx-check'></i> Priority support
