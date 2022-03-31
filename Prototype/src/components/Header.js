@@ -39,7 +39,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link className='nav-link' to='/buy-more'>
-                    Buy More Reports
+                    {currentPlan === 'ultimate' ? 'Top Up Account' : 'Buy More Reports'}
                   </Link>
                 </li>
                 <li>
