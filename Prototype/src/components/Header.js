@@ -32,15 +32,11 @@ const Header = () => {
           <ul>
             {loginStatus === '1' ? (
               <React.Fragment>
-                {currentPlan === 'ultimate' ? (
-                  ''
-                ) : (
-                  <li>
-                    <Link className='nav-link' to='/buy-more'>
-                      Buy More Reports
-                    </Link>
-                  </li>
-                )}
+                <li>
+                  <Link className='nav-link' to='/buy-more'>
+                    Buy More Reports
+                  </Link>
+                </li>
                 <li>
                   <Link className='nav-link' to='/reports'>
                     View Reports
