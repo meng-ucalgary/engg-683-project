@@ -19,6 +19,7 @@ const Header = () => {
   }
 
   const loginStatus = localStorage.getItem('Authenticated');
+  const currentPlan = localStorage.getItem('plan');
 
   return (
     <header id='header' className='fixed-top header-scrolled'>
@@ -29,21 +30,25 @@ const Header = () => {
 
         <nav id='navbar' className='navbar'>
           <ul>
-            <li>
-              <Link className='nav-link' to='/pricing'>
-                Pricing
-              </Link>
-            </li>
-            <li>
-              <Link className='nav-link' to='/contact-us'>
-                Contact us
-              </Link>
-            </li>
             {loginStatus === '1' ? (
               <React.Fragment>
+                {currentPlan === 'ultimate' ? (
+                  ''
+                ) : (
+                  <li>
+                    <Link className='nav-link' to='/buy-more'>
+                      Buy More Reports
+                    </Link>
+                  </li>
+                )}
                 <li>
                   <Link className='nav-link' to='/reports'>
-                    View reports
+                    View Reports
+                  </Link>
+                </li>
+                <li>
+                  <Link className='nav-link' to='/profile'>
+                    Profile
                   </Link>
                 </li>
                 <li>
@@ -55,7 +60,7 @@ const Header = () => {
             ) : (
               <React.Fragment>
                 <li>
-                  <Link className='nav-link' to='/register'>
+                  <Link className='nav-link' to='/pricing'>
                     Register
                   </Link>
                 </li>
