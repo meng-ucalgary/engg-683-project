@@ -4,8 +4,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const ErrorPage = () => {
-  let notFoundPic = '/images/page_not_found.svg';
-
   return (
     <React.Fragment>
       <Header />
