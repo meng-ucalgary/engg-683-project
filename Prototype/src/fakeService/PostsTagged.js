@@ -4,7 +4,7 @@ const PostsTagged = [
     socialMedia: 'Facebook',
     author: 'Ying Sun',
     url: 'https://www.facebook.com/SamoZaen',
-    urlText: '	Check out #### at the PARTY!!!',
+    urlText: 'Check out #### at the PARTY!!!',
     postDate: '2022-01-15',
   },
 ];

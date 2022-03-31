@@ -34,7 +34,9 @@ const SampleBasicReport = () => {
             <h3 className='pb-5'>Report 25968 - Details</h3>
 
             <div className='px-3'>
-              <h5>Problematic Posts You Authored</h5>
+              <h5>
+                <u>Problematic Posts You Authored</u>
+              </h5>
               <div className='row pt-3 px-3'>
                 <div className='col-lg-5'>
                   <img src={`${process.env.PUBLIC_URL + '/images/PostsAuthored.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
@@ -75,7 +77,9 @@ const SampleBasicReport = () => {
             </div>
 
             <div className='pt-5 px-3'>
-              <h5>Problematic Posts You are Tagged On</h5>
+              <h5>
+                <u>Problematic Posts You are Tagged On</u>
+              </h5>
               <div className='row pt-3 px-3'>
                 <div className='col-lg-7'>
                   <div className='card' style={{ border: '0' }}>
@@ -112,7 +116,7 @@ const SampleBasicReport = () => {
                   </div>
                 </div>
                 <div className='col-lg-5'>
-                  <img src={`${process.env.PUBLIC_URL + '/images/PostsAuthored.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
+                  <img src={`${process.env.PUBLIC_URL + '/images/PostsTagged.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
                 </div>
               </div>
             </div>
