@@ -219,7 +219,7 @@ const Home = () => {
                   <div className='member-info'>
                     <h4>Michael Man Yin Lee</h4>
                     <span>Founder</span>
-                    <p>Software Engineering graduate, expert in Data Analytics</p>
+                    <p>MEng in Software Engineering, expert in Data Analytics</p>
                     <div className='social'>
                       <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>
                         <i className='ri-twitter-fill'></i>
@@ -246,7 +246,7 @@ const Home = () => {
                   <div className='member-info'>
                     <h4>Drew Burritt</h4>
                     <span>Chief Executive Officer</span>
-                    <p>Software Engineering graduate, expert in Machine Learning models</p>
+                    <p>MEng in Software Engineering, expert in Machine Learning models</p>
                     <div className='social'>
                       <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>
                         <i className='ri-twitter-fill'></i>
@@ -273,7 +273,7 @@ const Home = () => {
                   <div className='member-info'>
                     <h4>Bhavyai Gupta</h4>
                     <span>Product Manager</span>
-                    <p>Software Engineering graduate, expert in Full Stack Development</p>
+                    <p>MEng in Software Engineering, expert in Full Stack Development</p>
                     <div className='social'>
                       <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>
                         <i className='ri-twitter-fill'></i>
@@ -300,7 +300,7 @@ const Home = () => {
                   <div className='member-info'>
                     <h4>Thomas Scott</h4>
                     <span>Marketing Head</span>
-                    <p>Software Engineering graduate, expert in Sales and Marketing</p>
+                    <p>MEng in Software Engineering, expert in Sales and Marketing</p>
                     <div className='social'>
                       <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>
                         <i className='ri-twitter-fill'></i>
@@ -327,7 +327,7 @@ const Home = () => {
                   <div className='member-info'>
                     <h4>Allen Ndonwi Shu</h4>
                     <span>Operations Head</span>
-                    <p>Environmental Engineering graduate, expert in Operations and Support</p>
+                    <p>MEng in Environmental Engineering, expert in Operations and Support</p>
                     <div className='social'>
                       <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>
                         <i className='ri-twitter-fill'></i>
