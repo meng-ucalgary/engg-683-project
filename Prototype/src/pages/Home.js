@@ -90,7 +90,7 @@ const Home = () => {
             <div className='row'>
               <div className='col-lg-6 pt-4 pt-lg-0 content' data-aos='fade-left'>
                 <h3>Problematic posts can be on any social media!</h3>
-                <p className='fst-italic'>As per research XXX, very high percentage of posts on each social media platform can be problematic</p>
+                <p className='fst-italic'>As per some research, very high percentage of posts on each social media platform can be problematic</p>
 
                 <div className='skills-content'>
                   <div className='progress'>
