@@ -1,4 +1,4 @@
-const SampleReportList = [
+const ReportList = [
   {
     id: 25968,
     type: 'BASIC',
@@ -13,4 +13,4 @@ const SampleReportList = [
   },
 ];
 
-export default SampleReportList;
+export default ReportList;

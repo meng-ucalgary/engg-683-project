@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import SampleReportList from '../fakeService/SampleReportList';
+import ReportList from '../fakeService/ReportList';
 
 const Reports = () => {
   return (
@@ -30,7 +30,7 @@ const Reports = () => {
 
             <div className='row'>
               <div className='col-lg-10 px-5'>
-                {SampleReportList.length === 0 ? (
+                {ReportList.length === 0 ? (
                   'No generated reports available'
                 ) : (
                   <table className='table table-hover' width='100%'>
@@ -43,7 +43,7 @@ const Reports = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {SampleReportList.map((item) => {
+                      {ReportList.map((item) => {
                         return (
                           <tr key={item['id']}>
                             <td>{item['id']}</td>
