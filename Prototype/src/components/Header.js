@@ -33,13 +33,13 @@ const Header = () => {
             {loginStatus === '1' ? (
               <React.Fragment>
                 <li>
-                  <Link className='nav-link' to='/buy-more'>
-                    Buy More Reports
+                  <Link className='nav-link' to='/reports'>
+                    View Reports
                   </Link>
                 </li>
                 <li>
-                  <Link className='nav-link' to='/reports'>
-                    View Reports
+                  <Link className='nav-link' to='/buy-more'>
+                    Buy More Reports
                   </Link>
                 </li>
                 <li>

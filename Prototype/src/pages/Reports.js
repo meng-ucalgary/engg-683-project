@@ -18,7 +18,7 @@ const Reports = () => {
                 <li>
                   <Link to='/'>Home</Link>
                 </li>
-                <li>Generated Reports</li>
+                <li>View Generated Reports</li>
               </ol>
             </div>
           </div>
@@ -26,7 +26,7 @@ const Reports = () => {
 
         <section className='inner-page'>
           <div className='container'>
-            <h3 className='pb-5'>Generated Reports</h3>
+            <h3 className='pb-5'>View Generated Reports</h3>
 
             <div className='row'>
               <div className='col-lg-10 px-5'>
