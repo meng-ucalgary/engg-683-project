@@ -7,14 +7,15 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import ContactUs from './pages/ContactUs';
 import Pricing from './pages/Pricing';
-import YourAccount from './components/youraccount';
+import Profile from './pages/Profile';
+
 import MainMenu from './components/mainmenu';
-import ErrorPage from './components/errorpage';
 import ProductLine from './components/productline';
 import TopUp from './components/topup';
 import ReportManagement from './components/reportmanagement';
 import BasicReport from './components/basicreport';
 import GoldReport from './components/goldreport';
+import ErrorPage from './pages/ErrorPage';
 
 const container = document.getElementById('root');
 const root = ReactDOMClient.createRoot(container);
@@ -26,10 +27,10 @@ root.render(
         <Route path='/products' element={<ProductLine />} />
         <Route path='/goldreportsample' element={<RequireAuth><GoldReport /></RequireAuth>} />
         <Route path='/basicreportsample' element={<BasicReport />} />
-        <Route path='/youraccount' element={<RequireAuth><YourAccount /></RequireAuth>} />
         <Route path='/menu' element={<MainMenu />} />
         <Route path='/report' element={<ReportManagement />} />
         <Route path='/topup' element={<TopUp />} />
+        <Route path='/profile' element={<RequireAuth><Profile /></RequireAuth>} />
 
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/contact-us' element={<ContactUs />} />
