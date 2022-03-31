@@ -159,9 +159,7 @@ const Home = () => {
                   <div className='icon'>
                     <i className='bx bx-layer'></i>
                   </div>
-                  <h4>
-                    <a href=''>Analyze</a>
-                  </h4>
+                  <h4>Analyze</h4>
                   <p>We analyze your reputation using state-of-the-art machine learning models and data analytics algorithms</p>
                 </div>
               </div>
@@ -171,9 +169,7 @@ const Home = () => {
                   <div className='icon'>
                     <i className='bx bx-file'></i>
                   </div>
-                  <h4>
-                    <a href=''>Compile</a>
-                  </h4>
+                  <h4>Compile</h4>
                   <p>We will give you a birds eye of your reputation in all of the major social media platforms</p>
                 </div>
               </div>
@@ -183,9 +179,7 @@ const Home = () => {
                   <div className='icon'>
                     <i className='bx bx-tachometer'></i>
                   </div>
-                  <h4>
-                    <a href=''>Action</a>
-                  </h4>
+                  <h4>Action</h4>
                   <p>We provide you with solutions to save your online reputation through our strategic partnerships.</p>
                 </div>
               </div>
