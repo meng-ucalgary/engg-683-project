@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='container'>
           <div className='row'>
             <div className='col-lg-3 col-md-6 footer-contact'>
-              <h3>EyeSea</h3>
+              <h3>EyeSea Analytics</h3>
               <p>2500 University Dr NW, Calgary, AB T2N 1N4</p>
               <p>
                 <strong>Email:</strong> hello@eyesea.ml
@@ -82,12 +82,12 @@ const Footer = () => {
         <div className='copyright'>
           &copy; Copyright{' '}
           <strong>
-            <span>Arsha</span>
+            <span>EyeSea</span>
           </strong>
           . All Rights Reserved
         </div>
         <div className='credits'>
-          Template from <Link to='https://bootstrapmade.com/'>BootstrapMade</Link>
+          Made possible by <b>Arsha</b> template from <a href='https://bootstrapmade.com/'>BootstrapMade</a>
         </div>
       </div>
     </footer>
