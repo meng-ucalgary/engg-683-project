@@ -9,6 +9,10 @@ import ImagesTagged from '../fakeService/ImagesTagged';
 import IdentificationLeak from '../fakeService/IdentificationLeak';
 
 const SampleGoldReport = () => {
+  function handleContentRemoval() {
+    window.alert('You will be redirected to reputation management firms for removal of troubled content.');
+  }
+
   return (
     <React.Fragment>
       <Header />
@@ -34,221 +38,237 @@ const SampleGoldReport = () => {
         <section className='inner-page'>
           <div className='container'>
             <h3 className='pb-5'>Report 27563 - Details</h3>
+            <div className='px-4'>
+              <div className='card shadow mb-4 px-3 text-dark'>
+                <div className='card-body'>
+                  <div className='px-3 py-5'>
+                    <h5>
+                      <u>Problematic Posts You Authored</u>
+                    </h5>
+                    <div className='row pt-3 px-3'>
+                      <div className='col-lg-5'>
+                        <img src={`${process.env.PUBLIC_URL + '/images/PostsAuthored.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
+                      </div>
+                      <div className='col-lg-7'>
+                        <div className='card' style={{ border: '0' }}>
+                          <div className='card-body'>
+                            {PostsAuthored.length === 0 ? (
+                              'No potentially problematic posts from you found'
+                            ) : (
+                              <table className='table table-hover' width='100%'>
+                                <thead className='thead-dark'>
+                                  <tr>
+                                    <th>Social Media</th>
+                                    <th>Link</th>
+                                    <th>Post Date</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {PostsAuthored.map((item) => {
+                                    return (
+                                      <tr key={item['id']}>
+                                        <td>{item['socialMedia']}</td>
+                                        <td>
+                                          <a href={item['url']}>{item['urlText']}</a>
+                                        </td>
+                                        <td>{item['postDate']}</td>
+                                      </tr>
+                                    );
+                                  })}
+                                </tbody>
+                              </table>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-            <div className='px-3'>
-              <h5>
-                <u>Problematic Posts You Authored</u>
-              </h5>
-              <div className='row pt-3 px-3'>
-                <div className='col-lg-5'>
-                  <img src={`${process.env.PUBLIC_URL + '/images/PostsAuthored.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
-                </div>
-                <div className='col-lg-7'>
-                  <div className='card' style={{ border: '0' }}>
-                    <div className='card-body'>
-                      {PostsAuthored.length === 0 ? (
-                        'No potentially problematic posts from you found'
-                      ) : (
-                        <table className='table table-hover' width='100%'>
-                          <thead className='thead-dark'>
-                            <tr>
-                              <th>Social Media</th>
-                              <th>Link</th>
-                              <th>Post Date</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {PostsAuthored.map((item) => {
-                              return (
-                                <tr key={item['id']}>
-                                  <td>{item['socialMedia']}</td>
-                                  <td>
-                                    <a href={item['url']}>{item['urlText']}</a>
-                                  </td>
-                                  <td>{item['postDate']}</td>
-                                </tr>
-                              );
-                            })}
-                          </tbody>
-                        </table>
-                      )}
+                  <hr />
+
+                  <div className='px-3 py-5'>
+                    <h5>
+                      <u>Problematic Posts You are Tagged On</u>
+                    </h5>
+                    <div className='row pt-3 px-3'>
+                      <div className='col-lg-7'>
+                        <div className='card' style={{ border: '0' }}>
+                          <div className='card-body'>
+                            {PostsTagged.length === 0 ? (
+                              'No potentially problematic tagged posts found'
+                            ) : (
+                              <table className='table table-hover' width='100%'>
+                                <thead className='thead-dark'>
+                                  <tr>
+                                    <th>Social Media</th>
+                                    <th>Link</th>
+                                    <th>Author</th>
+                                    <th>Post Date</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {PostsTagged.map((item) => {
+                                    return (
+                                      <tr key={item['id']}>
+                                        <td>{item['socialMedia']}</td>
+                                        <td>
+                                          <a href={item['url']}>{item['urlText']}</a>
+                                        </td>
+                                        <td>{item['author']}</td>
+                                        <td>{item['postDate']}</td>
+                                      </tr>
+                                    );
+                                  })}
+                                </tbody>
+                              </table>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                      <div className='col-lg-5'>
+                        <img src={`${process.env.PUBLIC_URL + '/images/PostsTagged.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <div className='px-3 py-5'>
+                    <h5>
+                      <u>Problematic Images You Uploaded</u>
+                    </h5>
+                    <div className='row pt-3 px-3'>
+                      <div className='col-lg-5'>
+                        <img src={`${process.env.PUBLIC_URL + '/images/ImagesAuthored.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
+                      </div>
+                      <div className='col-lg-7'>
+                        <div className='card' style={{ border: '0' }}>
+                          <div className='card-body'>
+                            {ImagesAuthored.length === 0 ? (
+                              'No potentially problematic images from you found'
+                            ) : (
+                              <table className='table table-hover' width='100%'>
+                                <thead className='thead-dark'>
+                                  <tr>
+                                    <th>Social Media</th>
+                                    <th>Link</th>
+                                    <th>Post Date</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {ImagesAuthored.map((item) => {
+                                    return (
+                                      <tr key={item['id']}>
+                                        <td>{item['socialMedia']}</td>
+                                        <td>
+                                          <a href={item['url']}>{item['urlText']}</a>
+                                        </td>
+                                        <td>{item['postDate']}</td>
+                                      </tr>
+                                    );
+                                  })}
+                                </tbody>
+                              </table>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <div className='px-3 py-5'>
+                    <h5>
+                      <u>Problematic Images You are Tagged On</u>
+                    </h5>
+                    <div className='row pt-3 px-3'>
+                      <div className='col-lg-7'>
+                        <div className='card' style={{ border: '0' }}>
+                          <div className='card-body'>
+                            {ImagesTagged.length === 0 ? (
+                              'No potentially problematic tagged images found'
+                            ) : (
+                              <table className='table table-hover' width='100%'>
+                                <thead className='thead-dark'>
+                                  <tr>
+                                    <th>Social Media</th>
+                                    <th>Link</th>
+                                    <th>Author</th>
+                                    <th>Post Date</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {ImagesTagged.map((item) => {
+                                    return (
+                                      <tr key={item['id']}>
+                                        <td>{item['socialMedia']}</td>
+                                        <td>
+                                          <a href={item['url']}>{item['urlText']}</a>
+                                        </td>
+                                        <td>{item['author']}</td>
+                                        <td>{item['postDate']}</td>
+                                      </tr>
+                                    );
+                                  })}
+                                </tbody>
+                              </table>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                      <div className='col-lg-5'>
+                        <img src={`${process.env.PUBLIC_URL + '/images/ImagesTagged.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <div className='px-3 py-5'>
+                    <h5>
+                      <u>Potential Identification Leaks</u>
+                    </h5>
+                    <div className='row pt-3 px-3'>
+                      <div className='col-lg-12'>
+                        <div className='card' style={{ border: '0' }}>
+                          <div className='card-body'>
+                            {IdentificationLeak.length === 0 ? (
+                              'No potential identification leaks found'
+                            ) : (
+                              <table className='table table-hover' width='100%'>
+                                <thead className='thead-dark'>
+                                  <tr>
+                                    <th>Identification Type</th>
+                                    <th>Link</th>
+                                    <th>Leak Date</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {IdentificationLeak.map((item) => {
+                                    return (
+                                      <tr key={item['id']}>
+                                        <td>{item['identityType']}</td>
+                                        <td>
+                                          <a href={item['url']}>{item['urlText']}</a>
+                                        </td>
+                                        <td>{item['postDate']}</td>
+                                      </tr>
+                                    );
+                                  })}
+                                </tbody>
+                              </table>
+                            )}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className='pt-5 px-3'>
-              <h5>
-                <u>Problematic Posts You are Tagged On</u>
-              </h5>
-              <div className='row pt-3 px-3'>
-                <div className='col-lg-7'>
-                  <div className='card' style={{ border: '0' }}>
-                    <div className='card-body'>
-                      {PostsTagged.length === 0 ? (
-                        'No potentially problematic tagged posts found'
-                      ) : (
-                        <table className='table table-hover' width='100%'>
-                          <thead className='thead-dark'>
-                            <tr>
-                              <th>Social Media</th>
-                              <th>Link</th>
-                              <th>Author</th>
-                              <th>Post Date</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {PostsTagged.map((item) => {
-                              return (
-                                <tr key={item['id']}>
-                                  <td>{item['socialMedia']}</td>
-                                  <td>
-                                    <a href={item['url']}>{item['urlText']}</a>
-                                  </td>
-                                  <td>{item['author']}</td>
-                                  <td>{item['postDate']}</td>
-                                </tr>
-                              );
-                            })}
-                          </tbody>
-                        </table>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className='col-lg-5'>
-                  <img src={`${process.env.PUBLIC_URL + '/images/PostsTagged.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
-                </div>
-              </div>
-            </div>
-
-            <div className='px-3'>
-              <h5>
-                <u>Problematic Images You Uploaded</u>
-              </h5>
-              <div className='row pt-3 px-3'>
-                <div className='col-lg-5'>
-                  <img src={`${process.env.PUBLIC_URL + '/images/ImagesAuthored.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
-                </div>
-                <div className='col-lg-7'>
-                  <div className='card' style={{ border: '0' }}>
-                    <div className='card-body'>
-                      {ImagesAuthored.length === 0 ? (
-                        'No potentially problematic images from you found'
-                      ) : (
-                        <table className='table table-hover' width='100%'>
-                          <thead className='thead-dark'>
-                            <tr>
-                              <th>Social Media</th>
-                              <th>Link</th>
-                              <th>Post Date</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {ImagesAuthored.map((item) => {
-                              return (
-                                <tr key={item['id']}>
-                                  <td>{item['socialMedia']}</td>
-                                  <td>
-                                    <a href={item['url']}>{item['urlText']}</a>
-                                  </td>
-                                  <td>{item['postDate']}</td>
-                                </tr>
-                              );
-                            })}
-                          </tbody>
-                        </table>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className='pt-5 px-3'>
-              <h5>
-                <u>Problematic Images You are Tagged On</u>
-              </h5>
-              <div className='row pt-3 px-3'>
-                <div className='col-lg-7'>
-                  <div className='card' style={{ border: '0' }}>
-                    <div className='card-body'>
-                      {ImagesTagged.length === 0 ? (
-                        'No potentially problematic tagged images found'
-                      ) : (
-                        <table className='table table-hover' width='100%'>
-                          <thead className='thead-dark'>
-                            <tr>
-                              <th>Social Media</th>
-                              <th>Link</th>
-                              <th>Author</th>
-                              <th>Post Date</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {ImagesTagged.map((item) => {
-                              return (
-                                <tr key={item['id']}>
-                                  <td>{item['socialMedia']}</td>
-                                  <td>
-                                    <a href={item['url']}>{item['urlText']}</a>
-                                  </td>
-                                  <td>{item['author']}</td>
-                                  <td>{item['postDate']}</td>
-                                </tr>
-                              );
-                            })}
-                          </tbody>
-                        </table>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className='col-lg-5'>
-                  <img src={`${process.env.PUBLIC_URL + '/images/ImagesTagged.png'}`} alt='' className='img-fluid img-thumbnail' style={{ height: '100%', objectFit: 'scale-down' }} />
-                </div>
-              </div>
-            </div>
-
-            <div className='pt-5 px-3'>
-              <h5>
-                <u>Potential Identification Leaks</u>
-              </h5>
-              <div className='row pt-3 px-3'>
-                <div className='col-lg-12'>
-                  <div className='card' style={{ border: '0' }}>
-                    <div className='card-body'>
-                      {IdentificationLeak.length === 0 ? (
-                        'No potential identification leaks found'
-                      ) : (
-                        <table className='table table-hover' width='100%'>
-                          <thead className='thead-dark'>
-                            <tr>
-                              <th>Identification Type</th>
-                              <th>Link</th>
-                              <th>Leak Date</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {IdentificationLeak.map((item) => {
-                              return (
-                                <tr key={item['id']}>
-                                  <td>{item['identityType']}</td>
-                                  <td>
-                                    <a href={item['url']}>{item['urlText']}</a>
-                                  </td>
-                                  <td>{item['postDate']}</td>
-                                </tr>
-                              );
-                            })}
-                          </tbody>
-                        </table>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <button type='button' className='btn btn-primary mt-4' onClick={handleContentRemoval}>
+                Get troubled content removed
+              </button>
             </div>
           </div>
         </section>
