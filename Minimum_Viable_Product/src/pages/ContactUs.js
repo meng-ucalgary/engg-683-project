@@ -64,7 +64,7 @@ const Contact = () => {
                     <i className='bi bi-envelope'></i>
                     <h4>Email:</h4>
                     <p>
-                      <a href='mailto:info@intellirn.ml' style={{ color: 'inherit' }}>
+                      <a href='mailto:hello@eyesea.ml' style={{ color: 'inherit' }}>
                         hello@eyesea.ml
                       </a>
                     </p>
