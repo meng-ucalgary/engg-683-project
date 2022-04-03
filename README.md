@@ -4,7 +4,7 @@ A project on creating a new hypothetical venture and follow the entrepreneurial 
 
 ## About
 
-In this project, we have created a startup called **EyeSea Analytics**. You can find more information about it in the project report.
+In this project, we have created a startup called **EyeSea Analytics**. You can find more information about it in the [project report](Documents/Report.pdf).
 
 ## Folder Structure
 
