@@ -11,7 +11,10 @@ const Footer = () => {
               <h3>EyeSea Analytics</h3>
               <p>2500 University Dr NW, Calgary, AB T2N 1N4</p>
               <p>
-                <strong>Email:</strong> hello@eyesea.ml
+                <strong>Email:</strong>{' '}
+                <a href='mailto:hello@eyesea.ml' style={{ color: 'inherit' }}>
+                  hello@eyesea.ml
+                </a>
               </p>
             </div>
 
@@ -25,7 +28,7 @@ const Footer = () => {
                   <i className='bx bx-chevron-right'></i> <Link to='/login'>Log in</Link>
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <Link to='/register'>Register</Link>
+                  <i className='bx bx-chevron-right'></i> <Link to='/pricing'>Register</Link>
                 </li>
                 <li>
                   <i className='bx bx-chevron-right'></i> <Link to='/reports'>Reports</Link>
