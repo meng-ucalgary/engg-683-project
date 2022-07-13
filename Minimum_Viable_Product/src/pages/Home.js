@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const Home = () => {
+  const loginStatus = localStorage.getItem('Authenticated');
+
   return (
     <React.Fragment>
       <Header />
@@ -39,40 +41,19 @@ const Home = () => {
                     <li>
                       <div data-bs-toggle='collapse'>
                         <span>01</span> Employers do check on your social media past!
-                        {/* <i className='bx bx-chevron-up icon-close'></i> */}
                       </div>
-                      {/* <div id='accordion-list-1' className='collapse show' data-bs-parent='.accordion-list'>
-                        <p>
-                          Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
-                          non.
-                        </p>
-                      </div> */}
                     </li>
 
                     <li>
                       <div data-bs-toggle='collapse'>
                         <span>02</span> There may be some information online about you that may be lethal to your reputation
-                        {/* <i className='bx bx-chevron-up icon-close'></i> */}
                       </div>
-                      {/* <div id='accordion-list-2' className='collapse show' data-bs-parent='.accordion-list'>
-                        <p>
-                          Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
-                          pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                        </p>
-                      </div> */}
                     </li>
 
                     <li>
                       <div data-bs-toggle='collapse'>
                         <span>03</span> Your career is dependent on it!
-                        {/* <i className='bx bx-chevron-up icon-close'></i> */}
                       </div>
-                      {/* <div id='accordion-list-3' className='collapse' data-bs-parent='.accordion-list'>
-                        <p>
-                          Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
-                          tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                        </p>
-                      </div> */}
                     </li>
                   </ul>
                 </div>
@@ -192,12 +173,18 @@ const Home = () => {
             <div className='row'>
               <div className='col-lg-9 text-center text-lg-start'>
                 <h3>Take back control of your social media</h3>
-                <p> Don't wait. Get started today.</p>
+                {loginStatus === '1' ? <p> Don't wait. Buy more reports now.</p> : <p> Don't wait. Login to get started.</p>}
               </div>
               <div className='col-lg-3 cta-btn-container text-center'>
-                <Link className='cta-btn align-middle' to='/pricing'>
-                  Sign up
-                </Link>
+                {loginStatus === '1' ? (
+                  <Link className='cta-btn align-middle' to='/buy-more'>
+                    Buy more reports
+                  </Link>
+                ) : (
+                  <Link className='cta-btn align-middle' to='/pricing'>
+                    Sign up
+                  </Link>
+                )}
               </div>
             </div>
           </div>

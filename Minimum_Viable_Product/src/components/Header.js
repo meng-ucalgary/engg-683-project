@@ -15,6 +15,7 @@ const Header = () => {
   function handleLogout(e) {
     logout().then(() => {
       navigate('/');
+      window.location.reload();
     });
   }
 

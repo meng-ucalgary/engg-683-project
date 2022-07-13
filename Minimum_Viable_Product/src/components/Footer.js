@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const loginStatus = localStorage.getItem('Authenticated');
+
   return (
     <footer id='footer'>
       <div className='footer-top'>
@@ -22,19 +24,24 @@ const Footer = () => {
               <h4>Useful Links</h4>
               <ul>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <Link to='/'>Home</Link>
+                  <i className='bx bx-chevron-right'></i>
+                  <Link to='/'>Home</Link>
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <Link to='/login'>Log in</Link>
+                  <i className='bx bx-chevron-right'></i>
+                  {loginStatus === '1' ? <Link to='/buy-more'>Buy reports</Link> : <Link to='/login'>Log in</Link>}
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <Link to='/pricing'>Register</Link>
+                  <i className='bx bx-chevron-right'></i>
+                  {loginStatus === '1' ? <Link to='/profile'>Profile</Link> : <Link to='/pricing'>Register</Link>}
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <Link to='/reports'>Reports</Link>
+                  <i className='bx bx-chevron-right'></i>
+                  <Link to='/reports'>Reports</Link>
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <Link to='/contact-us'>Contact us</Link>
+                  <i className='bx bx-chevron-right'></i>
+                  <Link to='/contact-us'>Contact us</Link>
                 </li>
               </ul>
             </div>
