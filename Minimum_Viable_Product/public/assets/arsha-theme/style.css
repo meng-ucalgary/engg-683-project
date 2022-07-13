@@ -188,6 +188,7 @@ h6 {
   font-size: 14px;
   border: 2px solid #47b2e4;
   font-weight: 600;
+  background-color: transparent;
 }
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
@@ -632,7 +633,7 @@ section {
   background: #fff;
   border-radius: 4px;
 }
-.why-us .accordion-list a {
+.why-us .accordion-list div {
   display: block;
   position: relative;
   font-family: 'Poppins', sans-serif;
@@ -1546,13 +1547,13 @@ section {
 #footer .footer-top .footer-links ul li:first-child {
   padding-top: 0;
 }
-#footer .footer-top .footer-links ul a {
+#footer .footer-top .footer-links ul span {
   color: #777777;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
 }
-#footer .footer-top .footer-links ul a:hover {
+#footer .footer-top .footer-links ul span:hover {
   text-decoration: none;
   color: #47b2e4;
 }

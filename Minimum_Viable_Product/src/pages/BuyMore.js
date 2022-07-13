@@ -68,9 +68,9 @@ const BuyMore = () => {
                         <i className='bx bx-check'></i> Overall reputation risk analysis
                       </li>
                     </ul>
-                    <a href='#' className='buy-btn' name='basic' onClick={(e) => handleTopUp(e)}>
+                    <button href='#' className='buy-btn' name='basic' onClick={(e) => handleTopUp(e)}>
                       Select
-                    </a>
+                    </button>
                   </div>
                 </div>
 
@@ -97,9 +97,9 @@ const BuyMore = () => {
                         <i className='bx bx-check'></i> Overall reputation risk analysis
                       </li>
                     </ul>
-                    <a href='#' className='buy-btn' name='gold' onClick={handleTopUp}>
+                    <button href='#' className='buy-btn' name='gold' onClick={handleTopUp}>
                       Select
-                    </a>
+                    </button>
                   </div>
                 </div>
 
@@ -123,9 +123,9 @@ const BuyMore = () => {
                         <i className='bx bx-check'></i> Priority support
                       </li>
                     </ul>
-                    <a href='#' className='buy-btn' name='ultimate' onClick={handleTopUp}>
+                    <button href='#' className='buy-btn' name='ultimate' onClick={handleTopUp}>
                       Select
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

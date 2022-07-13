@@ -20,7 +20,6 @@ const PostsAuthored = [
     urlText: 'Peter cheated on me...',
     postDate: '2022-01-14',
   },
-  ,
 ];
 
 export default PostsAuthored;

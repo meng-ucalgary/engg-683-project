@@ -64,9 +64,9 @@ const Pricing = () => {
                       <i className='bx bx-check'></i> Overall reputation risk analysis
                     </li>
                   </ul>
-                  <a href='#' className='buy-btn' name='basic' onClick={(e) => handleGetStarted(e)}>
+                  <button className='buy-btn' name='basic' onClick={(e) => handleGetStarted(e)}>
                     Get Started
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -93,9 +93,9 @@ const Pricing = () => {
                       <i className='bx bx-check'></i> Overall reputation risk analysis
                     </li>
                   </ul>
-                  <a href='#' className='buy-btn' name='gold' onClick={handleGetStarted}>
+                  <button href='#' className='buy-btn' name='gold' onClick={handleGetStarted}>
                     Get Started
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -119,9 +119,9 @@ const Pricing = () => {
                       <i className='bx bx-check'></i> Priority support
                     </li>
                   </ul>
-                  <a href='#' className='buy-btn' name='ultimate' onClick={handleGetStarted}>
+                  <button href='#' className='buy-btn' name='ultimate' onClick={handleGetStarted}>
                     Get Started
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

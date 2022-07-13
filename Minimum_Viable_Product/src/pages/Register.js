@@ -52,7 +52,7 @@ const Register = () => {
       // window.alert('You are already registered!');
       navigate('/profile');
     }
-  }, []);
+  }, [navigate]);
 
   return (
     <React.Fragment>

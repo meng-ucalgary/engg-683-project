@@ -43,19 +43,19 @@ const Footer = () => {
               <h4>Our Strengths</h4>
               <ul>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <a>Automated Reports</a>
+                  <i className='bx bx-chevron-right'></i> <span>Automated Reports</span>
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <a>With Detailed Analysis</a>
+                  <i className='bx bx-chevron-right'></i> <span>With Detailed Analysis</span>
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <a>Powered by Machine Learning</a>
+                  <i className='bx bx-chevron-right'></i> <span>Powered by Machine Learning</span>
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <a>At Low Price</a>
+                  <i className='bx bx-chevron-right'></i> <span>At Low Price</span>
                 </li>
                 <li>
-                  <i className='bx bx-chevron-right'></i> <a>Brings Great Satisfaction</a>
+                  <i className='bx bx-chevron-right'></i> <span>Brings Great Satisfaction</span>
                 </li>
               </ul>
             </div>

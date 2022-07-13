@@ -37,10 +37,10 @@ const Home = () => {
                 <div className='accordion-list'>
                   <ul>
                     <li>
-                      <a data-bs-toggle='collapse'>
+                      <div data-bs-toggle='collapse'>
                         <span>01</span> Employers do check on your social media past!
                         {/* <i className='bx bx-chevron-up icon-close'></i> */}
-                      </a>
+                      </div>
                       {/* <div id='accordion-list-1' className='collapse show' data-bs-parent='.accordion-list'>
                         <p>
                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
@@ -50,10 +50,10 @@ const Home = () => {
                     </li>
 
                     <li>
-                      <a data-bs-toggle='collapse'>
+                      <div data-bs-toggle='collapse'>
                         <span>02</span> There may be some information online about you that may be lethal to your reputation
                         {/* <i className='bx bx-chevron-up icon-close'></i> */}
-                      </a>
+                      </div>
                       {/* <div id='accordion-list-2' className='collapse show' data-bs-parent='.accordion-list'>
                         <p>
                           Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec
@@ -63,10 +63,10 @@ const Home = () => {
                     </li>
 
                     <li>
-                      <a data-bs-toggle='collapse'>
+                      <div data-bs-toggle='collapse'>
                         <span>03</span> Your career is dependent on it!
                         {/* <i className='bx bx-chevron-up icon-close'></i> */}
-                      </a>
+                      </div>
                       {/* <div id='accordion-list-3' className='collapse' data-bs-parent='.accordion-list'>
                         <p>
                           Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum

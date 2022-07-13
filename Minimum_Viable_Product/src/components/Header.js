@@ -48,9 +48,9 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <a className='getstarted' onClick={handleLogout}>
+                  <button className='getstarted' onClick={handleLogout}>
                     Logout
-                  </a>
+                  </button>
                 </li>
               </React.Fragment>
             ) : (
